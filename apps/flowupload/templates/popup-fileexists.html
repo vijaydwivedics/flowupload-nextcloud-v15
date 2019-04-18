@@ -1,0 +1,35 @@
+<div id="{dialog_name}" title="{title}" class="fileexists">
+	<span class="why">{why}<!-- Which files do you want to keep --></span><br/>
+	<span class="what"><!--{what}--><!-- If you select both versions, the copied file will have a number added to its name. --></span>
+	<br/>
+	<table>
+	<tr style="background:none;">
+		<td style="border:0;"><input id="radio-allnewfiles{nofp}" name="radio_option" class="allnewfiles radio" value="replace" type="radio" /><label for="radio-allnewfiles{nofp}">{allnewfiles}<span class="count"></span></label></td>
+		<td style="border:0;"><input id="radio-allexistingfilescopy{nofp}" name="radio_option" class="allexistingfilescopy radio" value="copy" type="radio" /><label for="radio-allexistingfilescopy{nofp}">{allexistingfilescopy}<span class="count"></span></label></td>
+	</tr>
+	<tr style="background:none;">
+	<td style="border:0;"><br/>
+	<input id="checkbox-allowforall{nofp}" class="allowforall checkbox" name="allowforall" type="checkbox" /><label for="checkbox-allowforall{nofp}"> Use this action for all files.</label></td>
+	</tr>
+	</table>
+	<div class="conflicts" style="margin-top: 10px;">
+		<div class="template">
+			<div class="filename" style="border-bottom: 1px solid #ccc;margin-bottom: 5px;"></div>
+			<div class="replacement">
+				<label>
+				<span class="svg icon"></span>
+				<div class="mtime"></div>
+				<div class="size"></div>
+				</label>
+			</div>
+			<div class="original">
+				<label>
+				<span class="svg icon"></span>
+				<div class="mtime"></div>
+				<div class="size"></div>
+				<div class="message"></div>
+				</label>
+			</div>
+		</div>
+	</div>
+</div>
