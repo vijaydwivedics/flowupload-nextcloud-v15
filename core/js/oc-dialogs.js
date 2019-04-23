@@ -568,13 +568,13 @@ var OCdialogs = {
             if ("copy" == o) {
                 var c = e - n._countContinue;
                 $("#checkbox-allowforall" + c).prop("checked") ? $.each(i, function(l, o) {
-                    n.checkFileNameToCopy(OC.generateUrl('apps/demoapp/files/ajax/checkfilename.php'), o, function(e) {
+                    n.checkFileNameToCopy(OC.generateUrl('apps/flowupload/ajax/checkfilename.php'), o, function(e) {
                         var i = JSON.parse(e);
                         o.newname = i.name, o.newpath = i.newpath;
                         var t = "#oc-dialog-fileexists-content-" + l;
                         Flow.prototype.addSingleFile(o, e, a), $(t).ocdialog("close")
                     })
-                }) : n.checkFileNameToCopy(OC.generateUrl('apps/demoapp/files/ajax/checkfilename.php'), l, function(e) {
+                }) : n.checkFileNameToCopy(OC.generateUrl('apps/flowupload/ajax/checkfilename.php'), l, function(e) {
 					console.log(e);
                     var i = JSON.parse(e);
                     l.newname = i.name, l.newpath = i.newpath, n._countContinue = n._countContinue + 1, Flow.prototype.addSingleFile(l, e, a), $(t).ocdialog("close")
