@@ -289,7 +289,6 @@
       }
 	  var d = new Date();
 	  var n = d.getTime();
-	  isReload=1
       // Some confusion in different versions of Firefox
       var relativePath = file.newpath || file.newname || file.relativePath || file.webkitRelativePath || file.fileName || file.name;
 	  return relativePath.replace(/[^0-9a-zA-Z_-]/img, '');
@@ -707,10 +706,6 @@
           this.fire('fileRemoved', file);
         }
       }
-	  if(this.files.length < 1)
-	  {
-		isReload=0;
-	  }
     },
 
     /**
